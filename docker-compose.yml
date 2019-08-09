@@ -1,0 +1,20 @@
+version: '2'
+services:
+  ap7:
+    build: php7
+    image: taropowder/php_test:ap7.0.33
+    volumes:
+      - ./php7/html/:/var/www/html
+      - ./php7/apache2:/etc/apache2
+      - ./php7/7.0:/etc/php/7.0
+    ports:
+      - 7777:80
+  ap5:
+    build: php5
+    image: taropowder/php_test:ap5.6
+    volumes:
+      - ./php5/html:/var/www/html
+      - ./php5/apache2:/etc/apache2
+      - ./php5/5.6:/etc/php/5.6
+    ports:
+      - 5555:80
