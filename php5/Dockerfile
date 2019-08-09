@@ -12,4 +12,6 @@ COPY start.sh /
 
 RUN chmod +x /start.sh
 
+WORKDIR /var/www/html
+
 ENTRYPOINT ["/start.sh"]
